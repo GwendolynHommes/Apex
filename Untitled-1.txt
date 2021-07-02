@@ -1,0 +1,9 @@
+public static List<account> get AllActiveAccounts() {
+    return [SELECT Name,BillingAddress,Level_of_Education__c,Quantity_students__c 
+    FROM Account 
+    WHERE Quantity_students__c > 1];
+}
+
+List<Account> accounts = getAllActiveAccounts();
+
+system.debug(accounts);
